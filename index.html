@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> Ervin's Portfolio Website</title>
+
         <meta charset="UTF-8">
         <!--Meta tags-->
         <meta name="description" content="Ervin Rey Portfolio Website">
@@ -12,28 +13,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Kaushan+Script&family=Mogra&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!--navigation bar-->
-        <div class="head-container">
-            <ul class="navigation-bar">
-              <li class="logo-item"><a href="">ER</a></li>
-              <li><a href="#home-container">Home</a></li>
-              <li><a href="">About Me</a></li>
-              <li><a href="">Blogs</a></li>
-              <li><a href="">My Projects</a></li>
-              <li><a href="">Contact Me</a></li>
-            </ul>
-        </div>
-        <!--The home page-->
-        <div class ="home-container" id= "home-container">
-            <div class = "left-content">
-                <h1>Ervin Rey Capuno</h1>
-                <p>Aspring Cybersecurity Specialist</p>
-            </div>
+        <div class="container">
+            <div class="navigation-bar">
+              <ul>
+                <li><a href="#home-container">Home</a></li>
+                <li><a href="#about-container">About Me</a></li>
+                <li><a href="#blog-container">Blogs</a></li>
+                <li><a href="#projects-container">My Projects</a></li>
+                <li><a href="#contact-container">Contact Me</a></li>
+                <li class="indicator"></li> <!-- Indicator for animation -->
 
-            <div class = "right-content">
-                <img src="" alt="picture of the content creator">
+              </ul>
             </div>
-        </div>
+            <div class="content">
+              <div class="home-container" id="home-container">
+                <h1>Ervin Rey G.<span> Capuno</span></h1>
+                <p>I</p>
+              </div>
+              <div class="about-container" id="about-container">
+                <!-- About Me Content -->
+              </div>
+              <div class="blog-container" id="blog-container">
+                <!-- Blog Content -->
+              </div>
+              <div class="projects-container" id="projects-container">
+                <!-- Projects Content -->
+              </div>
+              <div class="contact-container" id="contact-container">
+                <!-- Contact Me Content -->
+              </div>
+            </div>
+          </div>
 
     </body>
 </html>
