@@ -1,93 +1,64 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Caveat', cursive;
-
-}
-/*
-font-family: 'Architects Daughter', cursive;
-font-family: 'Caveat', cursive;
-font-family: 'Kaushan Script', cursive;
-font-family: 'Mogra', cursive;
-*/
-
-/* navigation bar */
-.head-container {
-    
-    width: 100vw; 
-    padding: 25px; 
-  }
-  
-  .navigation-bar {
-    display: flex; 
-    justify-content: space-between; 
-    list-style: none; 
-  }
-  
-  .navigation-bar li {
-    margin-right: 10px; 
-  }
-  
-  .navigation-bar li.logo-item {
-    margin-right: auto; 
-  }
-  
-  .navigation-bar li a {
-    font-size: 35px;
-    color: #000000;
-    text-decoration: none;
-    padding: 5px 10px;
-    position: relative;
-  }
-  
-  .navigation-bar li a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 2px;
-    background-color: #000000;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .navigation-bar li a:hover:after {
-    transform: scaleX(1);
-  }
-
-  /* home page */
-
-  .home-container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.left-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f2f2f2;
+/* the navigation bar */
+
+.navigation-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  width: 200px;
+  height: 100vh;
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.right-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaeaea;
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.right-content img {
-    max-width: 100%;
-    max-height: 100%;
+.navigation-bar li {
+  margin-bottom: 10px;
+}
+
+.navigation-bar a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+}
+
+/* the contatiner of all the pages */
+.container {
+  display: flex;
+}
+.content {
+  flex: 1;
+  padding-left: 200px;
+}
+/* the home container/page */
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    font-size: 24px;
-    text-align: center;
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
 }
