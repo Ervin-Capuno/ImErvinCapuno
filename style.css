@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +12,7 @@ body {
 .navigation-bar {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center items vertically */
+  justify-content: center; /* Align items at the center vertically */
   align-items: center; /* Center items horizontally */
   width: 200px;
   height: 100vh;
@@ -16,6 +20,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  padding-top: 20px; /* Add space between navigation and container */
 }
 
 .navigation-bar ul {
@@ -36,15 +41,16 @@ body {
   font-size: 18px;
 }
 
-/* the contatiner of all the pages */
+/* the container of all the pages */
 .container {
   display: flex;
-  margin: 85px 85px 0px 55px;
+  padding: 86px 0px 0px 245px; /* Adjust the left padding to create space */
 }
+
 .content {
   flex: 1;
-  padding-left: 200px;
 }
+
 /* the home container/page */
 .home-container {
   height: 100vh;
@@ -52,14 +58,51 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 20px; /* Add padding to create space within the container */
 }
 
 h1 {
-  font-size: 24px;
-  text-align: justify;
-}   
+  font-size: 55px;
+  text-align: center;
+  margin-top: 85px; /* Position the h1 tag down */
+}
 
 p {
   font-size: 18px;
   text-align: justify;
+  width: 100%;
 }
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* Media Query */
+@media (max-width: 700px) {
+  .toggle-button {
+    display: flex;
+  }
+  
+  .navigation-bar {
+    display: none;
+  }
+  
+  .container {
+    padding-left: 0;
+  }
+}
+
