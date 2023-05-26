@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Ervin's Portfolio Website</title>
+<head>
+  <title>Ervin's Portfolio Website</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <!-- Meta tags -->
+  <meta name="description" content="Ervin Rey Portfolio Website">
+  <meta name="keywords" content="Ervin Rey">
+  <meta name="author" content="Ervin Rey Capuno">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Kaushan+Script&family=Mogra&display=swap" rel="stylesheet">
+</head>
 
-        <meta charset="UTF-8">
-        <!--Meta tags-->
-        <meta name="description" content="Ervin Rey Portfolio Website">
-        <meta name="keywords" content="Ervin Rey">
-        <meta name="author" content="Ervin Rey Capuno">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Kaushan+Script&family=Mogra&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <div class="navigation-bar">
-              <ul>
-                <li><a href="#home-container">Home</a></li>
-                <li><a href="#about-container">About Me</a></li>
-                <li><a href="#blog-container">Blogs</a></li>
-                <li><a href="#projects-container">My Projects</a></li>
-                <li><a href="#contact-container">Contact Me</a></li>
-                <li class="indicator"></li> <!-- Indicator for animation -->
+<body>
+  <div class="container">
+    <div class="toggle-button" onclick="toggleNavigation()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div> 
+    <div class="navigation-bar" id="navigation-bar">
+      <ul>
+        <li><a href="#home-container">Home</a></li>
+        <li><a href="#about-container">About Me</a></li>
+        <li><a href="#blog-container">Blogs</a></li>
+        <li><a href="#projects-container">My Projects</a></li>
+        <li><a href="#contact-container">Contact Me</a></li>
+      </ul>
+    </div>
+    
+    <div class="content">
+      <div class="home-container" id="home-container">
+        <h1>Ervin Rey G.<span class="last-Name"> Capuno</span></h1>
+        <p>I</p>
+      </div>
+      <div class="about-container" id="about-container">
+        <!-- About Me Content -->
+      </div>
+      <div class="blog-container" id="blog-container">
+        <!-- Blog Content -->
+      </div>
+      <div class="projects-container" id="projects-container">
+        <!-- Projects Content -->
+      </div>
+      <div class="contact-container" id="contact-container">
+        <!-- Contact Me Content -->
+      </div>
+    </div>
+  </div>
 
-              </ul>
-            </div>
-            <div class="content">
-              <div class="home-container" id="home-container">
-                <h1>Ervin Rey G.<span> Capuno</span></h1>
-                <p>I</p>
-              </div>
-              <div class="about-container" id="about-container">
-                <!-- About Me Content -->
-              </div>
-              <div class="blog-container" id="blog-container">
-                <!-- Blog Content -->
-              </div>
-              <div class="projects-container" id="projects-container">
-                <!-- Projects Content -->
-              </div>
-              <div class="contact-container" id="contact-container">
-                <!-- Contact Me Content -->
-              </div>
-            </div>
-          </div>
-
-    </body>
+  <script>
+    // Toggle Navigation Function
+    function toggleNavigation() {
+      var navigation = document.getElementById('navigation-bar');
+      navigation.classList.toggle('open');
+    }
+  </script>
+</body>
 </html>
