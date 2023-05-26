@@ -39,6 +39,7 @@ body {
 /* the contatiner of all the pages */
 .container {
   display: flex;
+  margin: 85px 85px 0px 55px;
 }
 .content {
   flex: 1;
@@ -49,16 +50,16 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 h1 {
   font-size: 24px;
-  text-align: center;
-}
+  text-align: justify;
+}   
 
 p {
   font-size: 18px;
-  text-align: center;
+  text-align: justify;
 }
