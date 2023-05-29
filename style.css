@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -41,6 +45,10 @@ body {
   font-size: 18px;
 }
 
+.horizontal-nav{
+  display: none;
+}
+
 /* the container of all the pages */
 .container {
   display: flex;
@@ -49,6 +57,7 @@ body {
 
 .content {
   flex: 1;
+  padding: 36px;
 }
 
 /* the home container/page */
@@ -61,18 +70,68 @@ body {
   padding: 20px; /* Add padding to create space within the container */
 }
 
-h1 {
-  font-size: 55px;
-  text-align: center;
+.about-container h1 {
+  font-size: 40px;
+  text-align: left;
   margin-top: 85px; /* Position the h1 tag down */
 }
 
-p {
+.about-container p {
   font-size: 18px;
   text-align: justify;
   width: 100%;
+  margin-bottom: 45px;
 }
 
+.about-container .resume{
+  padding: 15px;
+  background-color: green;
+  border-radius: 50px;
+}
+
+.about-container a{
+  text-decoration: none;
+  color: white;
+}
+
+.about-container h5{
+  margin-top: 45px;
+  font-size: 25px;
+}
+/*accounts*/
+
+.about-container .accounts .fa{
+  font-size: 35px;
+  color: black;
+  transition: opacity 0.3s ease;
+}
+.about-container .accounts .github{
+  padding: 5px 0px 0px 0px;
+}
+
+.about-container .accounts .facebook{
+  padding: 5px 0px 0px 10px;
+}
+.about-container .accounts .instagram{
+  padding: 5px 0px 0px 10px;
+}
+
+/*hovering*/
+.about-container .accounts .github:hover{
+  padding: 5px 0px 0px 0px;
+  opacity: 0.5;
+}
+
+.about-container .accounts .facebook:hover{
+  padding: 5px 0px 0px 10px;
+  opacity: 0.5;
+}
+.about-container .accounts .instagram:hover{
+  padding: 5px 0px 0px 10px;
+  opacity: 0.5;
+}
+
+/*toggle-button*/
 .toggle-button {
   position: absolute;
   top: 0.75rem;
@@ -92,17 +151,51 @@ p {
 }
 
 /* Media Query */
-@media (max-width: 700px) {
+@media (max-width: 845px) {
   .toggle-button {
     display: flex;
   }
-  
-  .navigation-bar {
+
+  .navigation-bar{
+  display: none;
+  }
+
+  /*horizontal navigation bar*/
+
+  .horizontal-nav{
     display: none;
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 100%;
+  }
+
+  .horizontal-nav ul{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(39, 39, 37, .5);
+    list-style-type: none;
+    width: 100%;  
+  }
+
+  .horizontal-nav ul li{
+    text-align: center;
+    padding: 0 0 10px 0;
+    width: 100%;
+  }
+
+  .horizontal-nav li a{
+  color: black;
+  text-decoration: none;
+  }
+
+  .container {
+    padding-left: 15px;
   }
   
-  .container {
-    padding-left: 0;
+
+  .horizontal-nav.active{
+    display: flex;
   }
 }
 
