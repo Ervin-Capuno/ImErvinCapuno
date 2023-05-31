@@ -61,7 +61,7 @@ body {
 }
 
 /* the home container/page */
-.home-container {
+.about-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,30 @@ body {
 .about-container .accounts .instagram{
   padding: 5px 0px 0px 10px;
 }
+/*My Projects sections */
 
+.projects-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.projects-container .title{
+  text-align: center;
+  order: -1;
+}
+
+.projects-container .project1{
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    background-color: green;
+}
+.projects-container .project1,
+.projects-container .project2{
+    margin-top: auto;
+}
 /*hovering*/
 .about-container .accounts .github:hover{
   padding: 5px 0px 0px 0px;
