@@ -8,12 +8,38 @@ html {
 
 ::root{
     --primary-color: white;
-    --secondary-colar: black;
+    --secondary-color: black;
 }
 
 dark-theme{
     --primary-color: black;
     --secondary-color: white;
 }
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.top-nav-container{
+    display: none;
+}
+
+
+.side-nav{
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.side-nav a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 
 
