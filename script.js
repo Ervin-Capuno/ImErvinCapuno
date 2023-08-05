@@ -1,21 +1,17 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
-const navbarLinks = document.getElementsByClassName('horizontal-nav')[0];
-const container = document.getElementsByClassName('container')[0];
-let navbarVisible = false;
+const toggleButton = document.getElementById("toggleButton");
+const sidebar = document.getElementById("sidebar");
+const navLinks = document.querySelectorAll(".nav-list a");
 
-toggleButton.addEventListener('click', () => {
-    if (navbarVisible) {
-        navbarLinks.classList.remove('active');
-    } else {
-        navbarLinks.classList.add('active');
-    }
-    navbarVisible = !navbarVisible;
+toggleButton.addEventListener("click", function() {
+    sidebar.classList.toggle("active");
+    toggleButton.classList.toggle("active");
 });
 
-//if resizing the window it will close the navigation bar
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 845) {
-        navbarLinks.classList.remove('active');
-        navbarVisible = false;
-    }
+// Add event listener to each navigation link
+navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+        sidebar.classList.remove("active");
+        toggleButton.classList.remove("active");
+    });
 });
+
