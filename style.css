@@ -3,11 +3,13 @@
 }
 
 :root {
+    --navigation-color: black;
     --primary-color: white;
     --secondary-color: black;
 }
 
 .dark-theme {
+    --navigation-color: white;
     --primary-color: black;
     --secondary-color: white;
 }
@@ -22,6 +24,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* The navigation container */
 .container {
     display: flex;
 }
@@ -29,8 +32,8 @@ body {
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: val(--primary-color);
-    color: val(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -58,14 +61,14 @@ body {
 
 .nav-list a {
     text-decoration: none;
-    color: val(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .toggle-button {
     display: none;
     border: none;
-    background-color: val(--primary-color);
-    color: val(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -93,7 +96,7 @@ body {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: val(--primary-color);
+    background-color: var(--secondary-color);
     margin: 4px auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -111,10 +114,13 @@ body {
     }
 }
 
+
+/* The main content */
 .main-content {
-    padding-left: 300px;
+    margin-left: 300px;
     transition: transform 0.3s ease, margin-top 0.3s ease;
     margin-top: 0;
+    background-color: yellow;
 }
 
 .main-content.slide-down {
@@ -122,6 +128,16 @@ body {
     animation: slideDown 0.3s ease forwards;
 }
 
+/* The home content */
+.main-content .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+    background-color: green;
+}
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -138,7 +154,7 @@ body {
     }
 
     .main-content {
-        padding-left: 0;
+        margin-left: 0;
         transform: translateY(0);
     }
 
