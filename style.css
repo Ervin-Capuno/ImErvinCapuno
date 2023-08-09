@@ -102,7 +102,7 @@ body {
     margin: 4px auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+/*
 .slide-down {
     animation: slideDown 0.3s ease forwards;
 }
@@ -116,8 +116,9 @@ body {
     }
 }
 
-
+*/
 /* The main content */
+/*
 .main-content {
     margin-left: 300px;
     transition: transform 0.3s ease, margin-top 0.3s ease;
@@ -129,7 +130,7 @@ body {
     margin-top: 250px;
     animation: slideDown 0.3s ease forwards;
 }
-
+*/
 /* The home content */
 .main-content .home{
     display: flex;
@@ -140,6 +141,75 @@ body {
     height: 100vh;
     background-color: green;
 }
+.resume {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; /* Adjust the value for the desired roundness */
+}
+
+.resume:hover {
+    background-color: #2980b9;
+}
+
+.main-content .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.about .p{
+    text-align:justify;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.timeline-item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
+
+.timeline-item .info {
+    width: calc(100% - 70px); /* Adjust as needed */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12%; /* Adjust this value to align with the icons */
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    transform: translate(-12%);
+}
+
+
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -158,15 +228,17 @@ body {
     .main-content {
         margin-left: 0;
         transform: translateY(0);
+        width: 100%;
     }
-
+/*
     .main-content.slide-down {
         animation: slideDown 0.3s ease forwards;
     }
+*/
 }
 
 @media(min-width: 769px) {
-        .sidebar {
+    .sidebar {
         width: 250px;
         height: 100vh;
         left: 0;
@@ -181,9 +253,10 @@ body {
         margin-top: 0;
         transition: transform 0.3s ease, margin-top 0.3s ease;
     }
-
+/*
     .main-content.slide-down {
         margin-top: 0;
         animation: none; 
     }
+*/
 }

@@ -16,4 +16,3 @@ navLinks.forEach(link => {
         mainContent.classList.remove("slide-down");
     });
 });
-
