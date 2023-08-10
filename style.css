@@ -3,13 +3,13 @@
 }
 
 :root {
-    --navigation-color: black;
+    --navigation-color: rgb(238, 235, 235);
     --primary-color: white;
     --secondary-color: black;
 }
 
 .dark-theme {
-    --navigation-color: white;
+    --navigation-color: rgb(11, 11, 11);
     --primary-color: black;
     --secondary-color: white;
 }
@@ -146,7 +146,7 @@ body {
     background-color: #3498db;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px; /* Adjust the value for the desired roundness */
+    border-radius: 5px; 
 }
 
 .resume:hover {
@@ -155,9 +155,9 @@ body {
 
 .about-content {
     display: flex;
-    justify-content: space-between; /* Distribute space between left and right */
-    align-items: center; /* Vertically align items in the center */
-    flex-wrap: wrap; /* Allow flex items to wrap if needed */
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
     /* Style for the left section */
@@ -182,6 +182,10 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.right p{
+    text-align: justify;
+    font-size: 25px;
+}
 
     /* Style for the profile image */
 .profile-image img {
@@ -191,7 +195,7 @@ body {
 
     /* Style for the skills section */
 .skills {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .skill {
@@ -211,9 +215,24 @@ body {
     height: 100%;
     background-color: #3498db;
 }
-.right .p{
-    text-align:justify;
+.progress-bar .tool-tip-text{
+    visibility: hidden;
+    width: 120px;
+    color: var(--seconday-color);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
 }
+.progress-bar:hover .tool-tip-text{
+    visibility: visible;
+}
+
+.left .socmed{
+    font-size: 45px;
+}
+
 
 .timeline {
     display: flex;
