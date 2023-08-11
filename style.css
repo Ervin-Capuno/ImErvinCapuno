@@ -106,34 +106,6 @@ body {
     margin: 4px auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/*
-.slide-down {
-    animation: slideDown 0.3s ease forwards;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-*/
-/* The main content */
-/*
-.main-content {
-    margin-left: 300px;
-    transition: transform 0.3s ease, margin-top 0.3s ease;
-    margin-top: 0;
-    background-color: yellow;
-}
-
-.main-content.slide-down {
-    margin-top: 250px;
-    animation: slideDown 0.3s ease forwards;
-}
 */
 /* The home content */
 .main-content .home{
@@ -313,11 +285,6 @@ body {
         display: flex;
         flex-direction: column;
     }
-/*
-    .main-content.slide-down {
-        animation: slideDown 0.3s ease forwards;
-    }
-*/
 }
 
 @media(min-width: 769px) {
@@ -336,10 +303,4 @@ body {
         margin-top: 0;
         transition: transform 0.3s ease, margin-top 0.3s ease;
     }
-/*
-    .main-content.slide-down {
-        margin-top: 0;
-        animation: none; 
-    }
-*/
 }
