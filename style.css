@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,6 +55,10 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.sidebar .social-media a{
+    color: black;
+    text-decoration: none;
 }
 
 .nav-list li {
@@ -161,7 +165,7 @@ body {
 }
 
     /* Style for the left section */
-.left {
+.about-content .left {
     flex: 1;
     padding: 20px;
     background-color: #f0f0f0;
@@ -173,7 +177,7 @@ body {
 }
 
     /* Style for the right section */
-.right {
+.about-content .right {
     flex: 1;
     padding: 20px;
     background-color: #e0e0e0;
@@ -183,8 +187,9 @@ body {
     justify-content: center;
 }
 .right p{
+    padding: 35px;
     text-align: justify;
-    font-size: 25px;
+    font-size: 18px;
 }
 
     /* Style for the profile image */
@@ -233,6 +238,11 @@ body {
     font-size: 45px;
 }
 
+.left .socmed a{
+    color: black;
+    text-decoration: none;
+}
+
 
 .timeline {
     display: flex;
@@ -261,7 +271,7 @@ body {
 }
 
 .timeline-item .info {
-    width: calc(100% - 70px); /* Adjust as needed */
+    width: calc(100% - 70px);
     padding: 10px;
     background-color: #f1f1f1;
     border-radius: 10px;
@@ -270,7 +280,7 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 12%; /* Adjust this value to align with the icons */
+    left: 12%;
     width: 2px;
     height: 100%;
     background-color: #ccc;
@@ -297,6 +307,11 @@ body {
         margin-left: 0;
         transform: translateY(0);
         width: 100%;
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
     }
 /*
     .main-content.slide-down {
