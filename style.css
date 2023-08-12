@@ -91,16 +91,16 @@ body {
 }
 
 .toggle-button.active {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     background-color: transparent;
 }
 
 .toggle-button.active span:nth-child(1) {
-    transform: rotate(45deg) translate(2px, 2px);
+    transform: rotate(45deg) translate(3px, 3px);
 }
 
 .toggle-button.active span:nth-child(2) {
-    transform: rotate(-45deg) translate(2px, -2px);
+    transform: rotate(-45deg) translate(3px, -3px);
 }
 
 .toggle-button span {
