@@ -119,8 +119,19 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: green;
+}
+
+.rounded-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.home p{
+    font-size: 24px;
+    font-weight: 4px;
 }
 .resume {
     padding: 10px 20px;
@@ -163,52 +174,35 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.right .biography{
+    text-align: center;
+    font-size: 24px;
+}
+
 .right p{
-    padding: 35px;
+    padding: 5px;
     text-align: justify;
     font-size: 18px;
 }
-
+.about-content .profile-titles{
+    font-size: 16px;
+}
     /* Style for the profile image */
-.profile-image img {
-    max-width: 100%;
-    border-radius: 50%;
-}
-
-    /* Style for the skills section */
-.skills {
-    margin-top: 40px;
-}
-
-.skill {
-    margin-bottom: 10px;
-}
-
-    /* Style for the progress bar */
-.progress {
+.about-content{
     width: 100%;
-    height: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
-
-.progress-bar {
-    height: 100%;
-    background-color: #3498db;
+.about .left{
+    max-width: 50%;
+    max-height: 535px;
+    overflow-y: auto;
 }
-.progress-bar .tool-tip-text{
-    visibility: hidden;
-    width: 120px;
-    color: var(--seconday-color);
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-}
-.progress-bar:hover .tool-tip-text{
-    visibility: visible;
+.profile-image img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
 }
 
 .left .socmed{
@@ -219,6 +213,56 @@ body {
     color: black;
     text-decoration: none;
 }
+
+
+/*Sytle for the projects section*/
+.projects{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.arduino-projects, .python-projects, .webdev-project{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    margin-bottom: 15px; 
+}
+
+.title{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.title::after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -5px; 
+    width: 100%; 
+    height: 2px;
+    background-color: white; 
+    opacity: 0; 
+    transition: width 0.3s ease, opacity 0.3s ease;
+    transform-origin: left;
+}
+
+.title:hover::after {
+    opacity: 1;
+    width: 100%; 
+}
+
+.title a{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 
 .timeline {
@@ -264,6 +308,11 @@ body {
     transform: translate(-12%);
 }
 
+.section-title{
+    text-align: center;
+    font-size: 35px;
+}
+
 
 @media (max-width: 768px) {
     .sidebar {
@@ -291,6 +340,10 @@ body {
         display: flex;
         flex-direction: column;
     }
+    .home p{
+        text-align: center;
+    }
+
 }
 
 @media(min-width: 769px) {
